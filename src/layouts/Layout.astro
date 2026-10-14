@@ -1,0 +1,53 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = 'M&E and data analytics consultant helping NGOs and SMEs measure what matters — and act on it.' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,500;1,500&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="brand">Amailuk Joseph Richard</a>
+        <nav class="site-nav">
+          <a href="/#services">Services</a>
+          <a href="/#work">Work</a>
+          <a href="/#about">About</a>
+          <a href="/#contact" class="btn btn-small">Get in touch</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© {new Date().getFullYear()} Amailuk Joseph Richard · M&E and data analytics consultant</p>
+        <p class="footer-links">
+          <a href="mailto:amailukj@gmail.com">amailukj@gmail.com</a> ·
+          <a href="tel:+254715888927">+254 715 888 927</a> ·
+          <a href="https://github.com/amailuk" rel="noopener">GitHub</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>

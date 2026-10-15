@@ -1,5 +1,33 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const services = [
+  {
+    num: '01',
+    title: 'Data collection & M&E systems',
+    body: 'Survey design and digital data collection that survives the field — KoboToolbox, SurveyCTO, and the data-management routines that keep programs measurable.',
+  },
+  {
+    num: '02',
+    title: 'Dashboards & reporting',
+    body: 'Power BI, Excel, and SQL pipelines that turn raw operational records into visuals a manager reads in ten seconds.',
+  },
+  {
+    num: '03',
+    title: 'Analysis & custom data tools',
+    body: 'Statistical analysis with honest tests and stated caveats — plus complete custom tools (Streamlit + PostgreSQL) when a spreadsheet stops being enough.',
+  },
+  {
+    num: '04',
+    title: 'Training & capacity building',
+    body: 'Coaching teams on data practice: from survey discipline to dashboard literacy. Former Head of Training — materials, mentoring, and measurable outcomes.',
+  },
+  {
+    num: '05',
+    title: 'Technical writing & documentation',
+    body: 'Reports, policy briefs, training materials, and data documentation — analysis that reads clearly outside the analytics team.',
+  },
+];
 ---
 <Layout title="Amailuk Joseph Richard — M&E and data analytics consultant">
   <section class="hero">
@@ -14,6 +42,25 @@ import Layout from '../layouts/Layout.astro';
       <div class="hero-actions">
         <a class="btn" href="/#work">See the work</a>
         <a class="btn btn-ghost" href="/#contact">Request a quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Services</span>
+        <h2>What you can hire me for</h2>
+        <p>Five service lines, one through-line: evidence-based decisions, delivered in a form your team will actually use.</p>
+      </div>
+      <div class="services-grid">
+        {services.map((s) => (
+          <div class="service-card">
+            <span class="num">{s.num}</span>
+            <h3>{s.title}</h3>
+            <p>{s.body}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>

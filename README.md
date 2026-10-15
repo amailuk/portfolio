@@ -19,4 +19,15 @@ Case studies and page content are maintained as markdown files under `src/conten
 
 ## Deploy
 
-Auto-deploys to Vercel on every push to `main` (connection set up in ticket #3). The production build must pass before pushing — it is the site's content gate: invalid content fails the build rather than rendering wrong.
+Auto-deploys to Vercel on every push to `main` — no configuration file needed; Vercel detects Astro and runs `npm run build`.
+
+One-time setup (owner):
+
+1. Log in at [vercel.com](https://vercel.com) (GitHub sign-in works) and go to **Add New → Project**.
+2. **Import** the `amailuk/portfolio` repository. Accept the detected framework (Astro) and default build settings.
+3. Before deploying, expand **Web Analytics** and enable it (privacy-friendly, no cookies).
+4. Deploy. The site goes live at the free `*.vercel.app` subdomain shown on the project.
+
+After that, every push to `main` deploys automatically within minutes; pull requests get preview deployments.
+
+The production build is the site's content gate: invalid content fails the build rather than rendering wrong.

@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 interface Props {
   title: string;
   description?: string;
@@ -19,6 +21,7 @@ const { title, description = 'M&E and data analytics consultant helping NGOs and
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,500;1,500&display=swap" rel="stylesheet" />
+    <script is:inline src="/_vercel/insights/script.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -47,7 +50,3 @@ const { title, description = 'M&E and data analytics consultant helping NGOs and
     </footer>
   </body>
 </html>
-
-<style is:global>
-  @import '../styles/global.css';
-</style>

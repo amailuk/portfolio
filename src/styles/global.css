@@ -147,6 +147,24 @@ a:hover { text-decoration: underline; }
 .stack-line { color: var(--ink-soft); font-size: 0.9rem; margin-top: 34px; border-top: 1px dashed var(--line); padding-top: 16px; }
 .back-link { display: inline-block; margin-bottom: 6px; color: var(--ink-soft); font-size: 0.9rem; }
 
+/* Coming-soon placeholders */
+.coming-note { margin: 18px 0 0; color: var(--ink-soft); font-size: 0.9rem; font-style: italic; }
+.placeholder-panel {
+  background: var(--card); border: 1px dashed var(--line); border-radius: var(--radius);
+  padding: 26px; color: var(--ink-soft); max-width: 62ch;
+}
+.placeholder-panel p { margin: 0; }
+
+/* Contact */
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+.contact-card {
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 22px; text-align: center; color: inherit;
+}
+.contact-card:hover { border-color: var(--accent); text-decoration: none; }
+.contact-card .label { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); font-weight: 700; }
+.contact-card .value { margin-top: 6px; font-weight: 600; }
+
 /* Footer */
 .site-footer { background: #14212b; color: #c8d3dc; padding: 34px 0; }
 .footer-inner { display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; font-size: 0.88rem; }

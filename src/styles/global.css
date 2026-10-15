@@ -95,6 +95,58 @@ a:hover { text-decoration: underline; }
 .service-card h3 { margin: 8px 0; font-size: 1.08rem; }
 .service-card p { margin: 0; color: var(--ink-soft); font-size: 0.94rem; }
 
+/* Work cards */
+.work-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
+.work-card {
+  display: flex; flex-direction: column; background: var(--card);
+  border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
+  transition: border-color 0.15s ease, transform 0.15s ease; color: inherit;
+}
+.work-card:hover { border-color: var(--accent); transform: translateY(-3px); text-decoration: none; }
+.work-card .cover {
+  aspect-ratio: 16 / 9; width: 100%; object-fit: cover; border-bottom: 1px solid var(--line);
+  background: #fff; display: block;
+}
+.work-card .body { padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.work-card .tag {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--accent-dark);
+}
+.work-card h3 { margin: 0; font-size: 1.12rem; line-height: 1.35; }
+.work-card p { margin: 0; color: var(--ink-soft); font-size: 0.92rem; flex: 1; }
+.work-card .card-metrics { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 6px; }
+.work-card .card-metrics div { font-size: 0.8rem; color: var(--ink-soft); }
+.work-card .card-metrics strong { display: block; font-size: 1.05rem; color: var(--ink); }
+
+/* Case-study pages */
+.case-hero { padding: 60px 0 40px; border-bottom: 1px solid var(--line); background: linear-gradient(180deg, var(--accent-wash), transparent); }
+.case-hero .tag {
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-dark);
+}
+.case-hero h1 { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.8rem, 3.6vw, 2.6rem); line-height: 1.2; margin: 10px 0 14px; }
+.case-hero .desc { color: var(--ink-soft); font-size: 1.08rem; max-width: 60ch; margin: 0 0 8px; }
+.case-hero .attribution { font-size: 0.9rem; color: var(--gold); font-style: italic; }
+.metrics-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin: 26px 0; }
+.metric {
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 16px 18px; text-align: center;
+}
+.metric .value { font-family: var(--font-display); font-size: 1.6rem; color: var(--accent-dark); }
+.metric .label { font-size: 0.8rem; color: var(--ink-soft); margin-top: 2px; }
+.case-body { padding: 30px 0 64px; max-width: 760px; }
+.case-body h2 { font-family: var(--font-display); font-weight: 500; font-size: 1.55rem; margin: 40px 0 12px; }
+.case-body p, .case-body li { color: #2c3c4b; }
+.case-body img {
+  border: 1px solid var(--line); border-radius: var(--radius); margin: 18px 0;
+  background: #fff; padding: 8px;
+}
+.case-body blockquote {
+  margin: 20px 0; padding: 14px 20px; border-left: 3px solid var(--gold);
+  background: var(--card); border-radius: 0 var(--radius) var(--radius) 0; color: var(--ink-soft);
+}
+.stack-line { color: var(--ink-soft); font-size: 0.9rem; margin-top: 34px; border-top: 1px dashed var(--line); padding-top: 16px; }
+.back-link { display: inline-block; margin-bottom: 6px; color: var(--ink-soft); font-size: 0.9rem; }
+
 /* Footer */
 .site-footer { background: #14212b; color: #c8d3dc; padding: 34px 0; }
 .footer-inner { display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; font-size: 0.88rem; }

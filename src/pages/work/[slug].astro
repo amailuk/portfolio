@@ -1,0 +1,38 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const work = await getCollection('work');
+  return work.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+<Layout title={`${entry.data.title} — Amailuk Joseph Richard`} description={entry.data.description}>
+  <section class="case-hero">
+    <div class="container">
+      <a class="back-link" href="/#work">← All work</a>
+      <span class="tag">{entry.data.category}</span>
+      <h1>{entry.data.title}</h1>
+      <p class="desc">{entry.data.description}</p>
+      {entry.data.attribution && <p class="attribution">{entry.data.attribution}</p>}
+      <div class="metrics-strip">
+        {entry.data.metrics.map((m) => (
+          <div class="metric">
+            <div class="value">{m.value}</div>
+            <div class="label">{m.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  <div class="container case-body">
+    <Content />
+    <p class="stack-line"><strong>Stack:</strong> {entry.data.stack.join(' · ')}</p>
+  </div>
+</Layout>

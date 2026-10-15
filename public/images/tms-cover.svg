@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#f4f2ec"/>
+  <rect x="40" y="40" width="280" height="60" rx="10" fill="#0f766e"/>
+  <rect x="40" y="115" width="280" height="60" rx="10" fill="#0f766e" opacity="0.85"/>
+  <rect x="40" y="190" width="280" height="60" rx="10" fill="#0f766e" opacity="0.7"/>
+  <rect x="40" y="265" width="280" height="55" rx="10" fill="#0f766e" opacity="0.55"/>
+  <text x="180" y="76" font-family="Georgia, serif" font-size="26" fill="#ffffff" text-anchor="middle">Rent Roll</text>
+  <text x="180" y="151" font-family="Georgia, serif" font-size="26" fill="#ffffff" text-anchor="middle">Payments</text>
+  <text x="180" y="226" font-family="Georgia, serif" font-size="26" fill="#ffffff" text-anchor="middle">Meters &amp; Penalties</text>
+  <text x="180" y="300" font-family="Georgia, serif" font-size="26" fill="#ffffff" text-anchor="middle">Tenants &amp; Leases</text>
+  <g transform="translate(380,60)">
+    <rect x="0" y="0" width="220" height="130" rx="10" fill="#ffffff" stroke="#e5e1d8"/>
+    <rect x="18" y="18" width="184" height="14" rx="7" fill="#0f766e"/>
+    <rect x="18" y="44" width="150" height="10" rx="5" fill="#c9d6d2"/>
+    <rect x="18" y="62" width="168" height="10" rx="5" fill="#c9d6d2"/>
+    <rect x="18" y="80" width="120" height="10" rx="5" fill="#c9d6d2"/>
+    <rect x="18" y="100" width="60" height="14" rx="7" fill="#b98a2f"/>
+  </g>
+  <g transform="translate(380,210)">
+    <ellipse cx="110" cy="86" rx="105" ry="12" fill="#e5e1d8"/>
+    <rect x="80" y="30" width="60" height="56" rx="6" fill="#ffffff" stroke="#e5e1d8"/>
+    <rect x="30" y="44" width="50" height="42" rx="6" fill="#ffffff" stroke="#e5e1d8"/>
+    <rect x="140" y="44" width="50" height="42" rx="6" fill="#ffffff" stroke="#e5e1d8"/>
+    <rect x="88" y="40" width="12" height="10" fill="#0f766e"/>
+    <rect x="106" y="40" width="12" height="10" fill="#0f766e"/>
+    <rect x="88" y="56" width="12" height="10" fill="#0f766e"/>
+    <rect x="106" y="56" width="12" height="10" fill="#0f766e"/>
+    <text x="110" y="24" font-family="Georgia, serif" font-size="18" fill="#45566a" text-anchor="middle">PostgreSQL</text>
+  </g>
+</svg>

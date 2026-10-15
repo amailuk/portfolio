@@ -1,5 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const featured = (await getCollection('work'))
+  .filter((w) => w.data.featured)
+  .sort((a, b) => a.data.order - b.data.order);
 
 const services = [
   {
@@ -60,6 +65,33 @@ const services = [
             <h3>{s.title}</h3>
             <p>{s.body}</p>
           </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="work">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Case studies</span>
+        <h2>Deep dives, honest numbers</h2>
+        <p>Each one a real engagement-shaped problem: context, method, findings, and recommendations — the numbers stated exactly as the artifacts support them.</p>
+      </div>
+      <div class="work-grid">
+        {featured.map((w) => (
+          <a class="work-card" href={`/work/${w.id}/`}>
+            <img class="cover" src={w.data.cover} alt={w.data.title} loading="lazy" />
+            <div class="body">
+              <span class="tag">{w.data.category}</span>
+              <h3>{w.data.title}</h3>
+              <p>{w.data.description}</p>
+              <div class="card-metrics">
+                {w.data.metrics.slice(0, 3).map((m) => (
+                  <div><strong>{m.value}</strong>{m.label}</div>
+                ))}
+              </div>
+            </div>
+          </a>
         ))}
       </div>
     </div>
